@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora EcoTrip</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="calculator">
+  <header class="calculator__header">
+    <div class="calculator__container">
+      <h1 class="calculator__title">🌿 Calculadora de Emissão de CO₂</h1>
+      <p class="calculator__subtitle">
+        Calcule as emissões de CO₂ das suas viagens e contribua para um planeta mais sustentável.
+      </p>
+    </div>
+  </header>
+
+  <main class="calculator__main">
+    <div class="calculator__container">
+      <form id="calculator-form" class="calculator__form" novalidate>
+        <div class="calculator__field">
+          <label for="origin" class="calculator__label">Origem</label>
+          <input
+            id="origin"
+            name="origin"
+            type="text"
+            list="cityes-list"
+            class="calculator__input"
+            placeholder="Digite a cidade de origem"
+            autocomplete="off"
+          >
+          <datalist id="cityes-list"></datalist>
+        </div>
+
+        <div class="calculator__field">
+          <label for="destination" class="calculator__label">Destino</label>
+          <input
+            id="destination"
+            name="destination"
+            type="text"
+            list="cityes-list"
+            class="calculator__input"
+            placeholder="Digite a cidade de destino"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="calculator__field">
+          <label for="distance" class="calculator__label">Distância (km)</label>
+          <input
+            id="distance"
+            name="distance"
+            type="number"
+            class="calculator__input"
+            readonly
+            min="0"
+            step="0.1"
+            placeholder="Preenchimento automático"
+          >
+          <p class="calculator__help">A distancia será preenchida automaticamente</p>
+        </div>
+
+        <div class="calculator__field calculator__field--checkbox">
+          <input type="checkbox" id="manual-distance" name="manual-distance" class="calculator__checkbox">
+          <label for="manual-distance" class="calculator__label calculator__label--checkbox">
+            Inserir distância manualmente
+          </label>
+        </div>
+
+        <fieldset class="calculator__field">
+          <legend class="calculator__legend">Meio de Transporte</legend>
+          <div class="calculator__grid">
+            <label class="calculator__option" for="transport-bicycle">
+              <input id="transport-bicycle" type="radio" name="transport" value="bicycle" class="calculator__radio">
+              <span class="calculator__option-card">
+                <span class="calculator__option-icon" aria-hidden="true">🚲</span>
+                <span class="calculator__option-text">Bicicleta</span>
+              </span>
+            </label>
+
+            <label class="calculator__option" for="transport-car">
+              <input id="transport-car" type="radio" name="transport" value="car" class="calculator__radio" checked>
+              <span class="calculator__option-card">
+                <span class="calculator__option-icon" aria-hidden="true">🚗</span>
+                <span class="calculator__option-text">Carro</span>
+              </span>
+            </label>
+
+            <label class="calculator__option" for="transport-bus">
+              <input id="transport-bus" type="radio" name="transport" value="bus" class="calculator__radio">
+              <span class="calculator__option-card">
+                <span class="calculator__option-icon" aria-hidden="true">🚌</span>
+                <span class="calculator__option-text">Ônibus</span>
+              </span>
+            </label>
+
+            <label class="calculator__option" for="transport-truck">
+              <input id="transport-truck" type="radio" name="transport" value="truck" class="calculator__radio">
+              <span class="calculator__option-card">
+                <span class="calculator__option-icon" aria-hidden="true">🚚</span>
+                <span class="calculator__option-text">Caminhão</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="calculator__button">Calcular Emissão</button>
+      </form>
+
+      <section id="results" class="calculator__section hidden" aria-live="polite">
+        <h2 class="calculator__section-title">Resultados da Emissão</h2>
+        <div id="results-content"></div>
+      </section>
+
+      <section id="comparison" class="calculator__section hidden" aria-live="polite">
+        <h2 class="calculator__section-title">Comparação entre Meios de Transporte</h2>
+        <div id="comparison-content"></div>
+      </section>
+
+      <section id="carbon-credits" class="calculator__section hidden" aria-live="polite">
+        <h2 class="calculator__section-title">Créditos de Carbono</h2>
+        <div id="carbon-credits-content"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="calculator__footer">
+    <div class="calculator__container">
+      <p>Desenvolvido por Gabriel Silva | Projeto GitHub Copilot by Pablo Lopes - DIO</p>
+    </div>
+  </footer>
+
+  <script src="js/routes-data.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
