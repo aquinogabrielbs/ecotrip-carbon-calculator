@@ -1,13 +1,111 @@
-# Calculadora EcoTrip - Simulador de Impacto Ambiental para Viagens
+# 🌱 EcoTrip Carbon Calculator
 
-Projeto web em HTML, CSS e JavaScript puro para simular emissão de CO2 em viagens com base em origem, destino, distância e modal de transporte.
+Uma calculadora web interativa para estimar emissões de CO₂ em viagens terrestres, desenvolvida com tecnologias web modernas. O projeto permite comparar diferentes modais de transporte e calcular créditos de carbono necessários para compensar o impacto ambiental.
 
-## Como executar localmente
+## ✨ Funcionalidades
 
-1. Abra a pasta do projeto no VS Code.
-2. Abra o arquivo index.html com a extensão Live Server.
-3. Use o formulário para testar o fluxo inicial da calculadora.
+- **Cálculo de Emissões**: Estima emissões de CO₂ baseadas em distância e modal de transporte
+- **Comparação de Modais**: Compara eficiência ambiental entre bicicleta, carro, ônibus e caminhão
+- **Banco de Rotas**: 38 rotas brasileiras pré-cadastradas com distâncias reais
+- **Preenchimento Automático**: Auto-preenchimento de distâncias para rotas conhecidas
+- **Sistema de Créditos**: Cálculo de créditos de carbono necessários para compensação
+- **Interface Responsiva**: Design adaptável para desktop e dispositivos móveis
+- **Formatação Brasileira**: Valores monetários e numéricos em português do Brasil
 
-## GitHub Pages
+## 🛠️ Tecnologias Utilizadas
 
-O projeto é estático e compatível com publicação no GitHub Pages, usando apenas caminhos relativos entre os arquivos.
+- **HTML5**: Estrutura semântica com formulários acessíveis
+- **CSS3**: Design responsivo com variáveis CSS e metodologia BEM
+- **JavaScript ES5+**: Arquitetura modular sem dependências externas
+- **GitHub Actions**: Deploy automatizado para GitHub Pages
+
+## 📊 Fatores de Emissão
+
+| Modal | Fator de Emissão (kg CO₂/km) |
+|-------|------------------------------|
+| 🚲 Bicicleta | 0.00 |
+| 🚗 Carro | 0.12 |
+| 🚌 Ônibus | 0.089 |
+| 🚛 Caminhão | 0.96 |
+
+## 💰 Sistema de Créditos de Carbono
+
+- **1 Crédito = 1.000 kg CO₂**
+- **Faixa de Preço**: R$ 50 - R$ 150 por crédito
+- **Cálculo**: Emissões totais ÷ 1.000 = Créditos necessários
+
+## 🚀 Como Executar Localmente
+
+### Pré-requisitos
+- Navegador web moderno
+- Extensão Live Server do VS Code (recomendado)
+
+### Passos
+1. Clone ou baixe o repositório
+2. Abra a pasta `ecotrip-carbon-calculator` no VS Code
+3. Clique com o botão direito em `index.html`
+4. Selecione "Open with Live Server"
+5. A aplicação abrirá automaticamente no navegador
+
+## 🌐 GitHub Pages
+
+O projeto está configurado para deploy automático no GitHub Pages:
+
+- **URL**: [https://aquinogabrielbs.github.io/ecotrip-carbon-calculator/](https://aquinogabrielbs.github.io/ecotrip-carbon-calculator/)
+- **Branch**: `main` configurado como branch de publicação
+- **Workflow**: Deploy automatizado via GitHub Actions (`.github/workflows/deploy.yml`)
+
+### Configuração do Workflow
+- **Trigger**: Push para branch `main` ou execução manual
+- **Permissões**: `contents: read` e `pages: write`
+- **Ambiente**: `github-pages` com branch de deploy automático
+
+## 📁 Estrutura do Projeto
+
+```
+ecotrip-carbon-calculator/
+├── index.html              # Estrutura principal da aplicação
+├── css/
+│   └── style.css          # Estilos responsivos com variáveis CSS
+├── js/
+│   ├── app.js             # Inicialização e controle de eventos
+│   ├── calculator.js      # Lógica de cálculos de emissões
+│   ├── config.js          # Configurações e fatores de emissão
+│   ├── routes-data.js     # Banco de dados de rotas brasileiras
+│   └── ui.js              # Interface e formatação de dados
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # Workflow de deploy para GitHub Pages
+└── README.md              # Documentação do projeto
+```
+
+## 🔧 Arquitetura
+
+O projeto utiliza uma arquitetura modular em JavaScript puro:
+
+- **`RoutesDB`**: Gerenciamento do banco de dados de rotas
+- **`CONFIG`**: Configurações globais e fatores de emissão
+- **`Calculator`**: Lógica matemática de cálculos
+- **`UI`**: Renderização e formatação da interface
+- **`App`**: Coordenação geral e manipulação de eventos
+
+## 📈 Exemplo de Uso
+
+Para uma viagem de São Paulo a Rio de Janeiro (430 km):
+
+- **Carro**: 51,60 kg CO₂
+- **Ônibus**: 38,27 kg CO₂ (26% menos que carro)
+- **Créditos necessários**: ~0,052 créditos
+- **Custo estimado**: R$ 2,60 - R$ 7,80
+
+---
+
+## 👨‍💻 Autor
+
+**Gabriel Silva**
+- GitHub: [@aquinogabrielbs](https://github.com/aquinogabrielbs)
+- LinkedIn: [Gabriel Silva](https://www.linkedin.com/in/gabriel-aquino777/)
+
+---
+
+*Desenvolvido com ❤️ para promover a conscientização ambiental através da tecnologia.*
