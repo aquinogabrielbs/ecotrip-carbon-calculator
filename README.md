@@ -2,6 +2,15 @@
 
 Uma calculadora web interativa para estimar emissões de CO₂ em viagens terrestres, desenvolvida com tecnologias web modernas. O projeto permite comparar diferentes modais de transporte e calcular créditos de carbono necessários para compensar o impacto ambiental.
 
+## Contexto do Bootcamp (DIO)
+
+Este projeto representa o case final do bootcamp "CI&T - Do Prompt ao Agente" da DIO, cujo objetivo principal foi aplicar a inteligência artificial de forma prática no fluxo de trabalho do desenvolvedor. O código foi criado com orientação das aulas e aprimorado iterativamente com assistência de IA.
+
+- **Bootcamp**: CI&T - Do Prompt ao Agente
+- **Case final**: desenvolvimento deste projeto com GitHub Copilot
+- **Ambiente**: VS Code
+- **Agente/Modelo**: ChatGPT Codex 5.3 XHight
+
 ## ✨ Funcionalidades
 
 - **Cálculo de Emissões**: Estima emissões de CO₂ baseadas em distância e modal de transporte
@@ -105,6 +114,9 @@ Para uma viagem de São Paulo a Rio de Janeiro (430 km):
 **Gabriel Silva**
 - GitHub: [@aquinogabrielbs](https://github.com/aquinogabrielbs)
 - LinkedIn: [Gabriel Silva](https://www.linkedin.com/in/gabriel-aquino777/)
+
+**Menção Honrosa**
+- **Professor Pablo Lopes**: Pela orientação excepcional no desafio final e pela inspiração para aplicar IA no desenvolvimento.
 
 ---
 
